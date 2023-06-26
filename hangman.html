@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        line {
+          stroke: black;
+          stroke-width: 4;
+        }
+        .hide {
+          visibility: hidden;
+        }
+      </style>
+      </head>
+<body>
+    <script src="hangman.js"></script>
+
+    
+
+    <svg height="400" width="400" >
+        <g id="body">
+          <g id="head" class="hide">
+            <circle cx="200" cy="80" r="20" stroke="black" stroke-width="4" fill="white" />
+          </g>
+          <line id="spine" x1="200" y1="100" x2="200" y2="150"  class="hide"/>
+          <line id="armL" x1="200" y1="120" x2="170" y2="140"  class="hide"/>
+          <line id="armR" x1="200" y1="120" x2="230" y2="140"  class="hide"/>
+          <line id="legL" x1="200" y1="150" x2="180" y2="190"  class="hide"/>
+          <line id="legR" x1="200" y1="150" x2="220" y2="190"  class="hide"/>
+        </g>
+        <line x1="10" y1="250" x2="380" y2="250" />
+        <line x1="100" y1="250" x2="100" y2="20" />
+        <line x1="100" y1="20" x2="200" y2="20" />
+        <line id="rope" x1="200" y1="20" x2="200" y2="60" />
+      </svg>
+      
+
+      
+<p id="fields">HangMan.</p>
+
+
+
+<div id="fields-container"></div>
+<br><br>
+<!-- <input type="text" maxlength="1" width="40px" placeholder="guess a character" hidden id="guess-field">
+<br>
+<button id="guess-button" onclick="guessCharacter()" hidden>guess?</button> -->
+
+  <button id = "btn1" onclick="guess()">Play</button>
+
+
+  <br><br>
+  <div id="wrong-elements">
+    <h1>Wrong elements</h1>
+  </div>
+
+
+
+  <h1 id="gameover" hidden>GameOver</h1>
+<h1 id="win" hidden>You win</h1>
+  <h1 id="game" hidden>game</h1>
+</body>
+</html>
